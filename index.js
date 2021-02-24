@@ -36,9 +36,6 @@ const logger = winston.createLogger({
         }),
         new winston.transports.File({filename: "error.log", level:'error'})
     ],
-    exceptionHandlers: [
-        new winston.transports.File({ filename: 'exceptions.log'})
-    ]
 });
 
 app.listen(PORT, () => {
